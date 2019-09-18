@@ -114,9 +114,12 @@ contains(names, "Colt", function(result) {
 //Code Here
 function uniq(arr, cb) {
 	let newArr = [];
-	arr.map((element, index) => {
-		!newArr.includes(element) && newArr.push(arr[index]);
-	});
+
+	for (let i = 0; i < arr.length; i++) {
+		if (!newArr.includes(arr[i])) {
+			newArr.push(arr[i]);
+		}
+	}
 	cb(newArr);
 }
 // Do not edit the code below.
